@@ -44,5 +44,20 @@ createApp({
             const index = this.getIndex(id, this.tasks)
             this.tasks.splice(index, 1);
         },
+        todoInvert(id){
+            const index = this.getIndex(id, this.tasks)
+            this.tasks[index].done = !this.tasks[index].done
+        },
+        filteredTasks(){
+            return this.tasks.filter((task)=>{
+                if(this.filterValue === '2' && !task.done){
+                    return true;
+                } else if(this.filterValue === '1' && task.done){
+                    return true;
+                } else if(this.filterValue === ''){
+                    return true;
+                }
+            });
+        },
     }
 }).mount('#app')
