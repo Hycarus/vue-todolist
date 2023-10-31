@@ -7,22 +7,22 @@ createApp({
             tasks: [
                 {
                     id: 1,
-                    text: 'testo 1',
+                    text: 'Computer',
                     done: false,
                 }, 
                 {
                     id: 2,
-                    text: 'testo 2',
+                    text: 'Playstation',
                     done: true,
                 }, 
                 {
                     id: 3,
-                    text: 'testo 3',
+                     text: 'Iphone 14',
                     done: false,
                 },
                 {
                     id: 4,
-                    text: 'testo 4',
+                    text: 'T-shirt',
                     done: true,
                 },
             ],
@@ -42,12 +42,15 @@ createApp({
             this.todoText = '';
         },
         removeTask(id){
-            const index = this.getIndex(id, this.tasks)
+            const index = this.getIndex(id)
             this.tasks.splice(index, 1);
         },
         todoInvert(id){
-            const index = this.getIndex(id, this.tasks)
+            const index = this.getIndex(id)
             this.tasks[index].done = !this.tasks[index].done
+        },
+        getIndex(id){
+            return this.tasks.findIndex((el) => el.id === id);
         },
         filteredTasks(){
             return this.tasks.filter((task)=>{
