@@ -49,9 +49,9 @@ createApp({
             const index = this.getIndex(id)
             this.tasks[index].done = !this.tasks[index].done
         },
-        getIndex(id){
-            return this.tasks.findIndex((el) => el.id === id);
-        },
+        // getIndex(id){
+        //     return this.tasks.findIndex((el) => el.id === id);
+        // },
         filteredTasks(){
             return this.tasks.filter((task)=>{
                 if(this.filterValue === '2' && !task.done){
