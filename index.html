@@ -41,6 +41,9 @@
             <span :class="{'done': element.done}" @click="todoInvert(index)">{{element.text}}</span>
           </li>
         </ul>
+        <div v-else>
+          <h3>Non hai task</h3>
+        </div>
       </main>
     </div>
 
