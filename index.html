@@ -49,7 +49,7 @@
       </header>
       <main>
         <ul class="list-group" v-if="tasks.length > 0">
-          <li class="list-group-item list-group-item-action d-flex justify-content-between" v-for="(element) in filteredTasks()" :key="element.id">
+          <li class="list-group-item list-group-item-action d-flex justify-content-between opacity-75" v-for="(element) in filteredTasks()" :key="element.id">
             <span :class="{'done': element.done}" @click="todoInvert(element.id)">
               {{element.text}}
             </span>
