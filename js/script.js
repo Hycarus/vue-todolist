@@ -42,11 +42,11 @@ createApp({
             this.todoText = '';
         },
         removeTask(id){
-            const index = this.getIndex(id)
+            const index = getIndex(id, this.tasks)
             this.tasks.splice(index, 1);
         },
         todoInvert(id){
-            const index = this.getIndex(id)
+            const index = getIndex(id, this.tasks)
             this.tasks[index].done = !this.tasks[index].done
         },
         // getIndex(id){
