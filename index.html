@@ -30,6 +30,10 @@
     <div id="app">
       <header>
         <img src="img/present.jpeg" alt="logo">
+        <div class="my-3">
+          <input type="text" class="form-control w-50 d-inline-block mx-3" v-model="todoText" :keyup.enter="addTask">
+          <button class="btn btn-info" @click="addTask">Add task</button>
+        </div>
       </header>
       <main>
 

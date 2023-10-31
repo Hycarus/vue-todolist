@@ -27,10 +27,18 @@ createApp({
                 },
             ],
             lastId: 4,
+            todoText: '',
         }
     },
     // contiene le funzioni e i metodi 
     methods: {
-        
+        addTask(){
+            this.tasks.unshift({
+                id: ++this.lastId,
+                text: this.todoText,
+                done: false,
+            });
+            this.todoText = '';
+        },
     }
 }).mount('#app')
