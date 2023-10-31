@@ -29,6 +29,8 @@ createApp({
             lastId: 4,
             todoText: '',
             filterValue: '',
+            audio: new Audio('audio/jingle-bells.mp3'),
+            active: true,
         }
     },
     // contiene le funzioni e i metodi 
@@ -63,5 +65,16 @@ createApp({
                 }
             });
         },
-    }
+        stopMusic(){
+            this.audio.pause();
+            this.active = false;
+        },
+        playMusic(){
+            this.audio.play();
+            this.active = true;
+        },
+    },
+    mounted(){
+        this.audio.play();
+    },
 }).mount('#app')
