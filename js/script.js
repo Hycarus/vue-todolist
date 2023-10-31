@@ -28,6 +28,7 @@ createApp({
             ],
             lastId: 4,
             todoText: '',
+            filterValue: '',
         }
     },
     // contiene le funzioni e i metodi 
