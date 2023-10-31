@@ -40,5 +40,9 @@ createApp({
             });
             this.todoText = '';
         },
+        removeTask(id){
+            const index = this.getIndex(id, this.tasks)
+            this.tasks.splice(index, 1);
+        },
     }
 }).mount('#app')
